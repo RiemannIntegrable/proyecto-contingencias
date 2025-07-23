@@ -67,20 +67,21 @@ renv/staging/
 # Pero siempre mantener
 !/images/.gitkeep
 
-# Generados por tex
-tex/*
-!tex/*.tex
-!tex/*.bib
-!tex/*.cls
-!tex/*.sty
+# Generados por docs
+docs/*
+!docs/*.bib
+!docs/*.tex
+!docs/*pdf
+!docs/config/*.tex
+!docs/content/*.tex
 *.aux
 *.bbl
 *.blg
-*.fdb_latexmk
+*.fdb_ladocsmk
 *.fls
 *.out
 *.toc
-*.synctex.gz
+*.syncdocs.gz
 *.nav
 *.snm
 *.vrb
@@ -98,7 +99,7 @@ tex/*
 # Sistema operativo
 .DS_Store
 .DS_Store?
-._*
+._* 
 .Spotlight-V100
 .Trashes
 ehthumbs.db

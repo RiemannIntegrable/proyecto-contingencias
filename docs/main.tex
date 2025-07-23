@@ -1,0 +1,38 @@
+\documentclass{article}
+
+% Importar configuración
+\input{config/packages}
+\input{config/commands}
+\input{config/doc_style}
+
+% Especificar el archivo de bibliografía (bibtex)
+
+\begin{document}
+
+% Encabezado
+\thispagestyle{firstpage}
+\vspace*{9\baselineskip}
+\graphicspath{ {./figures/} }
+
+% Tabla de contenidos
+\renewcommand{\contentsname}{}
+\setcounter{tocdepth}{2} % Solo mostrar hasta subsections (level 2)
+\begin{cuadrocontenido}
+  \tableofcontents
+\end{cuadrocontenido}
+
+% Contenido
+\input{content/Introduccion}
+\input{content/punto1}
+\input{content/punto2}
+\input{content/punto3}
+
+% Bibliografía
+\addcontentsline{toc}{chapter}{Bibliografía}
+\renewcommand\bibname{Bibliografía}
+
+% Bibliografía
+\bibliographystyle{apalike}
+\bibliography{referencias}
+
+\end{document}
